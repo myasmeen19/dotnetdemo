@@ -18,7 +18,7 @@ variables:
   imagePullSecret: 'test12343766b-auth'
 
   # Agent VM image name
-  vmImageName: 'test'
+  vmImageName: 'yasmeen'
 
 stages:
 - stage: Build
