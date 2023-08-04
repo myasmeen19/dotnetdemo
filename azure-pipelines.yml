@@ -23,13 +23,13 @@ variables:
 
 
 stages:
-- stage: 
+- stage: Build
   displayName: Build stage
   jobs:
   - job: Build
     displayName: Build
     pool:
-      vmImage: $(vmImageName)
+      name: $(vmImageName)
     steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
@@ -43,7 +43,6 @@ stages:
 
     - upload: manifests
       artifact: manifests
-
 
 - stage: Deploytest
   displayName: Deploy test
